@@ -17,7 +17,6 @@ endef
 
 .PHONY: help
 help: ## Display help message
-	$(call INFO_MESSAGE, Prepare local dev env: Create virtual env and install the pre-commit hooks)
 	@./sbin/makefile-extract-documentation ${MAKEFILE_LIST}
 
 ############################################################################
