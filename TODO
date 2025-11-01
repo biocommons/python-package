@@ -14,6 +14,6 @@
     - uv build
     - uv publish
 
-uvx --from biocommons-example marvin-quote
+uvx --from python-package marvin-quote
 
 - [ ] move installation instructions to docs

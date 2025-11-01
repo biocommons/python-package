@@ -162,7 +162,7 @@ wheels = [
 ]
 
 [[package]]
-name = "biocommons-example"
+name = "python-package"
 source = { editable = "." }
 dependencies = [
     { name = "coloredlogs" },
