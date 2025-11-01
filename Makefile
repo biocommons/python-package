@@ -8,6 +8,12 @@
 .DEFAULT_GOAL := help
 default: help
 
+COLOR_RESET=\033[0m
+COLOR_CYAN_BOLD=\033[1;36m
+define INFO_MESSAGE
+	@echo "⏩$(COLOR_CYAN_BOLD)$(1)$(COLOR_RESET)"
+endef
+
 ############################################################################
 #= BASIC USAGE
 
@@ -21,14 +27,14 @@ help: ## Display help message
 install: devready
 .PHONY: devready
 devready: ## Prepare local dev env: Create virtual env, install the pre-commit hooks
-	$(call INFO_MESSAGE, "⚙️ Prepare local dev env: Create virtual env and install the pre-commit hooks")
+	$(call INFO_MESSAGE, "Prepare local dev env: Create virtual env and install the pre-commit hooks")
 	uv sync --dev
 	uv run pre-commit install
 	@echo '⚠️ Activate the virtual env with `source .venv/bin/activate`'
 
 .PHONY: build
 build: ## Build package
-	$(call INFO_MESSAGE, "🛠️ Build package")
+	$(call INFO_MESSAGE, "Build package")
 	rm -fr dist
 	uv build
 
@@ -72,12 +78,12 @@ docs-test: ## Test if documentation can be built without warnings or errors
 
 .PHONY: clean
 clean:  ## Remove temporary and backup files
-	$(call INFO_MESSAGE, "🧹 Remove temporary and backup files")
+	$(call INFO_MESSAGE, "Remove temporary and backup files")
 	find . \( -name "*~" -o -name "*.bak" \) -exec rm -frv {} +
 
 .PHONY: cleaner
 cleaner: clean  ## Remove files and directories that are easily rebuilt
-	$(call INFO_MESSAGE, "🗑️ Remove files and directories that are easily rebuilt")
+	$(call INFO_MESSAGE, "Remove files and directories that are easily rebuilt")
 	rm -frv .cache .DS_Store .pytest_cache .ruff_cache build coverage.xml dist docs/_build site
 	find . \( -name __pycache__ -type d \) -exec rm -frv {} +
 	find . \( -name "*.pyc" -o -name "*.egg-info" \) -exec rm -frv {} +
@@ -85,7 +91,7 @@ cleaner: clean  ## Remove files and directories that are easily rebuilt
 
 .PHONY: cleanest
 cleanest: cleaner  ## Remove files and directories that can be rebuilt
-	$(call INFO_MESSAGE, "🗑️🔥 Remove files and directories that can be rebuilt")
+	$(call INFO_MESSAGE, "Remove files and directories that can be rebuilt")
 	rm -frv .eggs .tox .venv venv
 
 .PHONY: distclean
