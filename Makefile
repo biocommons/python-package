@@ -21,20 +21,20 @@ help: ## Display help message
 install: devready
 .PHONY: devready
 devready: ## Prepare local dev env: Create virtual env, install the pre-commit hooks
-	$(call INFO_MESSAGE, Prepare local dev env: Create virtual env and install the pre-commit hooks)
+	$(call INFO_MESSAGE, "⚙️ Prepare local dev env: Create virtual env and install the pre-commit hooks")
 	uv sync --dev
 	uv run pre-commit install
-	@echo '⚠️ You must activate the virtual env with `source .venv/bin/activate`'
+	@echo '⚠️ Activate the virtual env with `source .venv/bin/activate`'
 
 .PHONY: build
 build: ## Build package
-	$(call INFO_MESSAGE, "Building package")
+	$(call INFO_MESSAGE, "🛠️ Build package")
 	rm -fr dist
 	uv build
 
 .PHONY: publish
-publish: build ## publish package to PyPI
-	$(call INFO_MESSAGE, "Publishing package")
+publish: build ## Publish package to PyPI
+	$(call INFO_MESSAGE, "Publish package to PyPI")
 	uv publish  # Requires UV_PUBLISH_TOKEN or Trusted Publishing setup
 
 ############################################################################
@@ -72,20 +72,20 @@ docs-test: ## Test if documentation can be built without warnings or errors
 
 .PHONY: clean
 clean:  ## Remove temporary and backup files
-	$(call INFO_MESSAGE, "Remove temporary and backup files")
+	$(call INFO_MESSAGE, "🧹 Remove temporary and backup files")
 	find . \( -name "*~" -o -name "*.bak" \) -exec rm -frv {} +
 
 .PHONY: cleaner
 cleaner: clean  ## Remove files and directories that are easily rebuilt
-	$(call INFO_MESSAGE, "Remove files and directories that are easily rebuilt")
+	$(call INFO_MESSAGE, "🗑️ Remove files and directories that are easily rebuilt")
 	rm -frv .cache .DS_Store .pytest_cache .ruff_cache build coverage.xml dist docs/_build site
 	find . \( -name __pycache__ -type d \) -exec rm -frv {} +
 	find . \( -name "*.pyc" -o -name "*.egg-info" \) -exec rm -frv {} +
 	find . \( -name "*.orig" -o -name "*.rej" \) -exec rm -frv {} +
 
 .PHONY: cleanest
-cleanest: cleaner  ## Remove all files that can be rebuilt
-	$(call INFO_MESSAGE, "Remove files and directories that can be rebuilt")
+cleanest: cleaner  ## Remove files and directories that can be rebuilt
+	$(call INFO_MESSAGE, "🗑️🔥 Remove files and directories that can be rebuilt")
 	rm -frv .eggs .tox .venv venv
 
 .PHONY: distclean

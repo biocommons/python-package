@@ -23,22 +23,27 @@ authors = [
   {email = "biocommons-dev@googlegroups.com", name = "biocommons contributors"}
 ]
 classifiers = [
+  "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
   "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 dependencies = ["coloredlogs ~= 15.0", "pyyaml ~= 6.0"]
 description = "biocommons.example package (namespaced)"
 dynamic = ["version"]
 keywords = [
-  "HGVS",
   "biocommons",
   "bioinformatics",
+  "computational biology",
+  "genome variation",
   "genomics",
+  "hgvs",
   "variation"
 ]
 license = "Apache-2.0"
@@ -192,10 +197,13 @@ select = [
 
 [tool.setuptools]
 include-package-data = true
+package-dir = {"" = "src"}
+zip-safe = true
 
 [tool.setuptools.package-data]
 # "*" = ["_data/*/*.json.gz"]
 # "*" = ["*.gz", "*.json", "*.yaml"]
+# hgvs = ["_data/*"]
 
 [tool.setuptools.packages.find]
 exclude = ["*.pyc", "__pycache__"]
