@@ -6,12 +6,19 @@
 [![Commit activity](https://img.shields.io/github/commit-activity/m/biocommons/python-package)](https://img.shields.io/github/commit-activity/m/biocommons/python-package)
 [![License](https://img.shields.io/github/license/biocommons/python-package)](https://img.shields.io/github/license/biocommons/python-package)
 
-Package Description
+## Package Description
 
 This project is a product of the [biocommons](https://biocommons.org/) community.
 
 - **Github repository**: <https://github.com/biocommons/python-package/>
 - **Documentation** <https://biocommons.github.io/python-package/>
+
+## Getting Help
+
+- 🐛 **Bug reports**: [Open an issue](../../issues/new?template=bug_report.md)
+- 💡 **Feature requests**: [Open an issue](../../issues/new?template=feature_request.md)
+- ❓ **Questions**: [Ask in biocommons/discussions](https://github.com/biocommons/discussions)
+- 💬 **General discussion**: [biocommons/discussions](https://github.com/biocommons/discussions)
 
 ## Python Package Installation
 
