@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "setuptools>=84.0.0"
-requires = ["setuptools >= 70.1", "setuptools_scm[toml] ~= 8.1"]
+requires = ["setuptools >= 70.1", "setuptools_scm[toml]~=10.3"]
 
 [dependency-groups]
 dev = [
