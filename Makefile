@@ -24,10 +24,10 @@ help: ## Display help message
 
 install: devready
 .PHONY: devready
-devready: ## Prepare local dev env: Create virtual env, install the pre-commit hooks
-	$(call INFO_MESSAGE, Prepare local dev env: Create virtual env and install the pre-commit hooks)
+devready: ## Prepare local dev env: Create virtual env, install the git hooks (prek)
+	$(call INFO_MESSAGE, Prepare local dev env: Create virtual env and install the git hooks (prek))
 	uv sync --dev
-	uv run pre-commit install
+	uv run prek install
 	$(call INFO_MESSAGE, Activate the virtual env with \`source .venv/bin/activate\`)
 
 .PHONY: build
@@ -49,7 +49,7 @@ cqa: ## Run code quality assessments
 	$(call INFO_MESSAGE, "Checking lock file consistency")
 	uv lock --locked
 	$(call INFO_MESSAGE, "Linting and reformatting files")
-	uv run pre-commit run
+	uv run prek run
 	$(call INFO_MESSAGE, "Checking for obsolete dependencies")
 	uv run deptry src
 

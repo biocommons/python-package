@@ -67,7 +67,7 @@ Then install uv using the [uv installation instructions](https://docs.astral.sh/
 
 ### One-time developer setup
 
-Create a Python virtual environment, install dependencies, install pre-commit hooks, and install an editable package:
+Create a Python virtual environment, install dependencies, install git hooks (prek), and install an editable package:
 
     make devready
 
@@ -88,7 +88,7 @@ supported targets.  A subset are listed here:
     help                Display help message
 
     SETUP, INSTALLATION, PACKAGING
-    devready            Prepare local dev env: Create virtual env, install the pre-commit hooks
+    devready            Prepare local dev env: Create virtual env, install the git hooks (prek)
     build               Build package
     publish             publish package to PyPI
 

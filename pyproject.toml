@@ -13,7 +13,7 @@ dev = [
   "mkdocs>=1.6",
   "mkdocstrings[python]>=0.30",
   "mypy>=1.17",
-  "pre-commit>=3.8",
+  "prek>=0.2",
   "pytest-cov>=4.1",
   "pytest-recording",
   "pytest~=9.0",
@@ -116,7 +116,6 @@ mkdocs = "mkdocs"
 mkdocs-material = "mkdocs_material"
 mkdocstrings = "mkdocstrings"
 mypy = "mypy"
-pre-commit = "pre_commit"
 pytest = "pytest"
 pytest-cov = "pytest_cov"
 pyyaml = "yaml"
