@@ -1,4 +1,4 @@
-"""biocommons.example package"""
+"""biocommons.python_package package"""
 
 from importlib.metadata import PackageNotFoundError, version
 

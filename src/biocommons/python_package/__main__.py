@@ -1,4 +1,4 @@
-"""biocommons.example.__main__"""
+"""biocommons.python_package.__main__"""
 
 import logging
 import time
