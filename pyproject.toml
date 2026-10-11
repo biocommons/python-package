@@ -30,6 +30,7 @@ authors = [
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
@@ -69,6 +70,7 @@ example = [
 marvin-quote = "biocommons.python_package.__main__:main"
 
 [project.urls]
+Changelog = "https://github.com/biocommons/python-package/releases"
 Documentation = "https://biocommons.github.io/python-package/"
 Homepage = "https://github.com/biocommons/python-package/"
 Issues = "https://github.com/biocommons/python-package/issues/"
