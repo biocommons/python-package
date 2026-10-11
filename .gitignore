@@ -11,10 +11,7 @@
 *.orig
 *.pot
 *.py.cover
-*.py[cod]
 *.py[codz]
-*.pyc
-*.pyo
 *.rej
 *.sage.py
 *.so
@@ -26,7 +23,7 @@
 .Python
 .abstra/
 .cache
-.claude
+.claude/
 .coverage
 .coverage.*
 .cursorignore
