@@ -56,7 +56,7 @@ keywords = [
   "variation"
 ]
 license = "Apache-2.0"
-name = "biocommons.python-package"
+name = "biocommons.python_package"
 readme = "README.md"
 requires-python = ">=3.12"
 

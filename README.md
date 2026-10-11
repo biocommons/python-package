@@ -22,7 +22,7 @@ This project is a product of the [biocommons](https://biocommons.org/) community
 
 ## Python Package Installation
 
-Install from PyPI with `pip install biocommons.python-package` or `uv pip install biocommons.python-package`, then try it:
+Install from PyPI with `pip install biocommons.python_package` or `uv pip install biocommons.python_package`, then try it:
 
     $ source venv/bin/activate
 
