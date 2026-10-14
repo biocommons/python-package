@@ -58,6 +58,16 @@ test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"
 	uv run pytest
 
+.PHONY: test-coverage
+test-coverage: ## Test the code with pytest and generate coverage report
+	@echo "🚀 Testing code: Running pytest with coverage"
+	uv run pytest --cov=src --cov-report=term-missing
+
+.PHONY: tox
+tox: ## Test the code with tox
+	@echo "🚀 Testing code: Running tox"
+	uv run tox
+
 ############################################################################
 #= DOCUMENTATION
 
