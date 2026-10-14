@@ -2,7 +2,7 @@ name: GitHub Coverage
 
 on:
   push:
-    branches: ["*"]
+    branches: ["**"]
 
 jobs:
   coverage-python:
