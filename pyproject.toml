@@ -4,22 +4,31 @@ requires = ["setuptools ~= 84.0.0", "setuptools_scm[toml] ~= 10.3.4"]
 
 [dependency-groups]
 dev = [
+  # code quality & formatting
   "deptry>=0.25.1",
-  "ipython>=9.17.1",
-  "jupyter>=1.1.1",
+  "mypy>=2.4.0",
+  "nox>=2026.8.17",
+  "prek>=0.5.5",
+  "ruff>=0.17.0",
+  "toml-sort>=0.25.0",
+  "uv-bump>=0.6.0",
+
+  # testing
+  "pytest>=9.1.1",
+  "pytest-cov>=7.1.0",
+  "pytest-recording>=0.14.0",
+  "tox-uv>=1.37.0",
+  "vcrpy>=8.3.0",
+
+  # documentation
   "mkdocs>=1.6.1",
   "mkdocs-awesome-nav>=3.3.0",
   "mkdocs-material>=9.7.7",
   "mkdocstrings[python]>=1.0.7",
-  "mypy>=2.4.0",
-  "prek>=0.5.5",
-  "pytest>=9.1.1",
-  "pytest-cov>=7.1.0",
-  "pytest-recording>=0.14.0",
-  "ruff>=0.17.0",
-  "toml-sort>=0.25.0",
-  "tox-uv>=1.37.0",
-  "vcrpy>=8.3.0",
+
+  # misc dev tools
+  "ipython>=9.17.1",
+  "jupyter>=1.1.1",
 ]
 
 [project]
@@ -44,7 +53,6 @@ classifiers = [
 dependencies = [
     "coloredlogs>=15.0.1",
     "pyyaml>=6.0.3",
-    "uv-bump>=0.6.0",
 ]
 description = "biocommons.python_package package (namespaced)"
 dynamic = ["version"]
@@ -121,7 +129,6 @@ pytest = "pytest"
 pytest-cov = "pytest_cov"
 pyyaml = "yaml"
 ruff = "ruff"
-tox-uv = "tox_uv"
 ty = "ty"
 
 [tool.pytest.ini_options]

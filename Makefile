@@ -27,7 +27,7 @@ install: devready
 devready: ## Prepare local dev env: Create virtual env, install the git hooks (prek)
 	$(call INFO_MESSAGE, Prepare local dev env: Create virtual env and install the git hooks (prek))
 	uv sync --dev
-	uv run prek install
+	uv run prek install -f
 	$(call INFO_MESSAGE, Activate the virtual env with \`source .venv/bin/activate\`)
 
 .PHONY: build
@@ -63,10 +63,13 @@ test-coverage: ## Test the code with pytest and generate coverage report
 	@echo "🚀 Testing code: Running pytest with coverage"
 	uv run pytest --cov=src --cov-report=term-missing
 
-.PHONY: tox
-tox: ## Test the code with tox
-	@echo "🚀 Testing code: Running tox"
-	uv run tox
+.PHONY: test-matrix
+test-matrix: ## Test with each supported Python version (via nox)
+	uv run nox
+
+# to be incorporated
+# test-learn:
+#	VCR_RECORD_MODE=new_episodes pytest -x
 
 ############################################################################
 #= DOCUMENTATION
@@ -84,19 +87,19 @@ docs-test: ## Test if documentation can be built without warnings or errors
 ############################################################################
 #= UTILITIES
 
-.PHONY: outdated-packages
-outdated-packages: ## List outdated packages
-	$(call INFO_MESSAGE, "Listing outdated packages")
+.PHONY: show-outdated-deps
+show-outdated-deps: ## List outdated dependencies
+	$(call INFO_MESSAGE, "Listing outdated dependencies")
 	uv pip list --outdated
 
-.PHONY: upgrade-packages
-upgrade-packages: ## Upgrade installed packages
-	$(call INFO_MESSAGE, "Upgrading packages")
+.PHONY: upgrade-deps
+upgrade-deps: ## Upgrade installed dependencies
+	$(call INFO_MESSAGE, "Upgrading dependencies")
 	uv lock --upgrade
 
-.PHONY: bump-packages
-bump-packages: ## Bumping versions of installed
-	$(call INFO_MESSAGE, "Bumping version")
+.PHONY: bump-deps
+bump-deps: ## Bumping versions of installed dependencies
+	$(call INFO_MESSAGE, "Bumping dependency versions")
 	uv-bump
 
 ############################################################################
@@ -127,7 +130,7 @@ distclean: cleanest  ## Remove untracked files and other detritus
 
 
 ## <LICENSE>
-## Copyright 2016 Committers
+## Copyright 2026 Committers
 ##
 ## Licensed under the Apache License, Version 2.0 (the "License");
 ## you may not use this file except in compliance with the License.

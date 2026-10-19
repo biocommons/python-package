@@ -17,3 +17,4 @@
 uvx --from python-package marvin-quote
 
 - [ ] move installation instructions to docs
+ensure uv sync is called with --locked
