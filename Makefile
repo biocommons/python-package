@@ -65,6 +65,7 @@ test-coverage: ## Test the code with pytest and generate coverage report
 
 .PHONY: test-matrix
 test-matrix: ## Test with each supported Python version (via nox)
+	@echo "🚀 Testing code: Testing supported versions with nox"
 	uv run nox
 
 # to be incorporated
