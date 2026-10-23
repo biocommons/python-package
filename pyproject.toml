@@ -152,7 +152,7 @@ testpaths = ["src", "tests"]
 [tool.ruff]
 line-length = 100
 src = ["src", "tests"]
-target-version = "py314"
+target-version = "py311"
 
 [tool.ruff.format]
 docstring-code-format = true
