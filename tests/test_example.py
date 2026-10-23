@@ -1,4 +1,4 @@
-from biocommons.python_package import __version__, get_quote_from_marvin
+from biocommons.template_py import __version__, get_quote_from_marvin
 
 
 def test_version():

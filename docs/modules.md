@@ -1,1 +1,1 @@
-::: biocommons.python_package.marvin
+::: biocommons.template_py.marvin

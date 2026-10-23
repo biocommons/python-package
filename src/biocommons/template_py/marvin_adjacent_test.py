@@ -1,4 +1,4 @@
-"""biocommons.python_package test, adjacent to code"""
+"""biocommons.template_py test, adjacent to code"""
 
 from .marvin import get_quote
 
