@@ -1,17 +1,17 @@
 # biocommons.template_py
 
-[![Release](https://img.shields.io/github/v/release/biocommons/python-package)](https://img.shields.io/github/v/release/biocommons/python-package)
-[![Build status](https://img.shields.io/github/actions/workflow/status/biocommons/python-package/main.yml?branch=main)](https://github.com/biocommons/python-package/actions/workflows/main.yml?query=branch%3Amain)
-[![codecov](https://codecov.io/gh/biocommons/python-package/branch/main/graph/badge.svg)](https://codecov.io/gh/biocommons/python-package)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/biocommons/python-package)](https://img.shields.io/github/commit-activity/m/biocommons/python-package)
-[![License](https://img.shields.io/github/license/biocommons/python-package)](https://img.shields.io/github/license/biocommons/python-package)
+[![Release](https://img.shields.io/github/v/release/biocommons/template-py)](https://img.shields.io/github/v/release/biocommons/template-py)
+[![Build status](https://img.shields.io/github/actions/workflow/status/biocommons/template-py/main.yml?branch=main)](https://github.com/biocommons/template-py/actions/workflows/main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/biocommons/template-py/branch/main/graph/badge.svg)](https://codecov.io/gh/biocommons/template-py)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/biocommons/template-py)](https://img.shields.io/github/commit-activity/m/biocommons/template-py)
+[![License](https://img.shields.io/github/license/biocommons/template-py)](https://img.shields.io/github/license/biocommons/template-py)
 
 ## Package Description
 
 This project is a product of the [biocommons](https://biocommons.org/) community.
 
-- **Github repository**: <https://github.com/biocommons/python-package/>
-- **Documentation** <https://biocommons.github.io/python-package/>
+- **Github repository**: <https://github.com/biocommons/template-py/>
+- **Documentation** <https://biocommons.github.io/template-py/>
 
 ## Getting Help
 
