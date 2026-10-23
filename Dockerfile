@@ -18,4 +18,4 @@ COPY . /app
 # Sync the project
 RUN uv sync --frozen
 
-CMD [ "python", "python_package/foo.py" ]
+CMD [ "python", "template_py/foo.py" ]

@@ -14,7 +14,7 @@
     - uv build
     - uv publish
 
-uvx --from python-package marvin-quote
+uvx --from template-py marvin-quote
 
 - [ ] move installation instructions to docs
 ensure uv sync is called with --locked

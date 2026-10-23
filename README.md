@@ -1,17 +1,17 @@
-# biocommons.python_package
+# biocommons.template_py
 
-[![Release](https://img.shields.io/github/v/release/biocommons/python-package)](https://img.shields.io/github/v/release/biocommons/python-package)
-[![Build status](https://img.shields.io/github/actions/workflow/status/biocommons/python-package/main.yml?branch=main)](https://github.com/biocommons/python-package/actions/workflows/main.yml?query=branch%3Amain)
-[![codecov](https://codecov.io/gh/biocommons/python-package/branch/main/graph/badge.svg)](https://codecov.io/gh/biocommons/python-package)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/biocommons/python-package)](https://img.shields.io/github/commit-activity/m/biocommons/python-package)
-[![License](https://img.shields.io/github/license/biocommons/python-package)](https://img.shields.io/github/license/biocommons/python-package)
+[![Release](https://img.shields.io/github/v/release/biocommons/template-py)](https://img.shields.io/github/v/release/biocommons/template-py)
+[![Build status](https://img.shields.io/github/actions/workflow/status/biocommons/template-py/main.yml?branch=main)](https://github.com/biocommons/template-py/actions/workflows/main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/biocommons/template-py/branch/main/graph/badge.svg)](https://codecov.io/gh/biocommons/template-py)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/biocommons/template-py)](https://img.shields.io/github/commit-activity/m/biocommons/template-py)
+[![License](https://img.shields.io/github/license/biocommons/template-py)](https://img.shields.io/github/license/biocommons/template-py)
 
 ## Package Description
 
 This project is a product of the [biocommons](https://biocommons.org/) community.
 
-- **Github repository**: <https://github.com/biocommons/python-package/>
-- **Documentation** <https://biocommons.github.io/python-package/>
+- **Github repository**: <https://github.com/biocommons/template-py/>
+- **Documentation** <https://biocommons.github.io/template-py/>
 
 ## Getting Help
 
@@ -22,11 +22,11 @@ This project is a product of the [biocommons](https://biocommons.org/) community
 
 ## Python Package Installation
 
-Install from PyPI with `pip install biocommons.python_package` or `uv pip install biocommons.python_package`, then try it:
+Install from PyPI with `pip install biocommons.template_py` or `uv pip install biocommons.template_py`, then try it:
 
     $ source venv/bin/activate
 
-    $ python3 -m biocommons.python_package
+    $ python3 -m biocommons.template_py
     Marvin says:
     There's only one life-form as intelligent as me within thirty parsecs...
 
@@ -35,7 +35,7 @@ Install from PyPI with `pip install biocommons.python_package` or `uv pip instal
     You think you've got problems? What are you supposed to do if you...
 
     $ ipython
-    >>> from biocommons.python_package import __version__, get_quote_from_marvin
+    >>> from biocommons.template_py import __version__, get_quote_from_marvin
     >>> __version__
     '0.1.dev8+gd5519a8.d20211123'
     >>> get_quote()

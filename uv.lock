@@ -250,7 +250,7 @@ wheels = [
 ]
 
 [[package]]
-name = "biocommons-python-package"
+name = "biocommons-template-py"
 source = { editable = "." }
 dependencies = [
     { name = "coloredlogs" },
