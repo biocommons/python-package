@@ -95,13 +95,34 @@ supported targets.  A subset are listed here:
     FORMATTING, TESTING, AND CODE QUALITY
     cqa                 Run code quality assessments
     test                Test the code with pytest
+    test-coverage       Test the code with pytest and generate coverage report
+    test-matrix         Test with each supported Python version (via nox)
 
     DOCUMENTATION
     docs-serve          Build and serve the documentation
     docs-test           Test if documentation can be built without warnings or errors
+    docs-deploy         Deploy documentation to GitHub Pages
 
     CLEANUP
     clean               Remove temporary and backup files
     cleaner             Remove files and directories that are easily rebuilt
     cleanest            Remove all files that can be rebuilt
     distclean           Remove untracked files and other detritus
+
+### Testing
+
+    make test            # tests, no coverage
+    make test-coverage   # tests with coverage; writes coverage.xml
+    make test-matrix     # `make test` on each Python version listed in pyproject.toml classifiers (nox)
+
+`make test` is the test command everywhere: locally, in each nox session, and in each CI matrix leg. One CI leg runs `make test-coverage` and uploads to Codecov instead.
+
+Known limitation: nox does not forward arguments, so `nox -- -k foo` runs the full suite. Run one version with `uv run nox -s tests-3.11`, or a subset on one version with `uv run --isolated --python 3.11 pytest -k foo` (`--isolated` leaves `.venv` untouched).
+
+#### VS Code
+
+Testing → Configure Python Tests → pytest → root directory. No other settings are needed; coverage is off by default, so breakpoints work.
+
+#### Coverage gate
+
+Codecov's `codecov/project` status fails when coverage drops more than 0.5% from the base commit. Make `codecov/project` a required status check in branch protection, or the gate does nothing.
