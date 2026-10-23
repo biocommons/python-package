@@ -17,7 +17,6 @@ dev = [
   "pytest>=9.1.1",
   "pytest-cov>=7.1.0",
   "pytest-recording>=0.14.0",
-  "tox-uv>=1.37.0",
   "vcrpy>=8.3.0",
 
   # documentation
@@ -134,7 +133,7 @@ ruff = "ruff"
 ty = "ty"
 
 [tool.pytest.ini_options]
-addopts = "-s -v -x --strict-markers -m 'not extra' --doctest-modules --cov=src"
+addopts = "--doctest-modules"
 doctest_optionflags = [
   "ALLOW_BYTES",
   "ALLOW_UNICODE",
@@ -143,9 +142,11 @@ doctest_optionflags = [
   "NORMALIZE_WHITESPACE"
 ]
 markers = [
+  "extra: optional tests; deselect with -m 'not extra'",
   "network: tests that require network connectivity",
   "slow: slow tests that should be run infrequently"
 ]
+strict_markers = true
 testpaths = ["src", "tests"]
 
 [tool.ruff]

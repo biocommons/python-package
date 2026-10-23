@@ -13,7 +13,7 @@ jobs:
     permissions:
       contents: write   # for gh-pages docs deploy
       id-token: write   # for Codecov OIDC
-    uses: biocommons/.github/.github/workflows/python-ci-cd.yml@1
+    uses: biocommons/.github/.github/workflows/python-ci-cd.yml@2
     with:
       # tagged commits (tags) trigger publishing to PyPI and docs
       publish: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/') }}
