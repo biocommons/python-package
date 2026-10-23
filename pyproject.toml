@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "setuptools.build_meta"
-requires = ["setuptools ~= 84.0.0", "setuptools_scm[toml] ~= 10.3.4"]
+requires = ["setuptools >= 80.0", "setuptools_scm[toml] >= 9.0"]
 
 [dependency-groups]
 dev = [
@@ -152,7 +152,7 @@ testpaths = ["src", "tests"]
 [tool.ruff]
 line-length = 100
 src = ["src", "tests"]
-target-version = "py314"
+target-version = "py311"
 
 [tool.ruff.format]
 docstring-code-format = true
